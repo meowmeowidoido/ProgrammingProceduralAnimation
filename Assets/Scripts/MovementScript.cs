@@ -165,19 +165,7 @@ public class MovementScript : MonoBehaviour
                 completelyTilted = false;
                 JumpUpdate();
                 break;
-            case MovementType.climbing:
-                JumpUpdate();
-
-                ClimbingMovement();
-
-                break;
-            case MovementType.tightrope:
-                TightRopeWalk();
-
-
-
-                break;
-        }
+                    }
     }
 
 
@@ -233,7 +221,6 @@ public class MovementScript : MonoBehaviour
 
         if (isGrounded)
         {
-            rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             //gravity from the actual rigidbody turns false 
             //rigidbody.useGravity = false;
             currentMovement = MovementType.running;
